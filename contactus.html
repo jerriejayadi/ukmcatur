@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin:0%;
+                padding:0%;
+            }
+        </style>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="contactus.css">
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc8MUFBgk4kk_rj-4AjWlL_AIzq7-v5iI&callback=initMap&libraries=&v=weekly"
+        defer>
+        </script>
+    </head>
+    <body>
+        <div class=header>
+            <div class=logo-container>
+                <a href=index.html><img class=logo src="res/Frame 1.png"></a>
+            </div>
+            <div class=nav>
+                <ul>
+                    <li><a class=navbar href=aboutus.html>About Us</a></li>
+                    <li><a class=navbar href=events.html>Events</a></li>
+                    <li><a class=navbar href=contactus.html>Contact Us</a></li>
+                    <li><a class=navbar href=registration.html>Registration</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class=content>
+            <div class=title>
+                Contact Us
+            </div>
+            <div class=subtitle>
+                Amet exercitation cillum deserunt laborum Lorem ex reprehenderit aliqua dolore consequat.
+            </div>
+            <div class=left-content>
+                <div class= alamat>
+                    <img class=icon src="res/location.svg">
+                    <text>Jalan Villa Puncak Tidar N-1</text><br><br>
+                    <img class=icon src="res/phone.svg">
+                    <text>+6281253195000</text>
+                </div>
+                <div id=map>
+
+                </div>
+            </div>
+            <div class=right-content>
+                <div class=form-title>
+                    Leave us a message
+                </div>
+                <form>
+                    <input id="namaLengkap" type=text placeholder="Nama Lengkap" required>
+                    <input id="email" type=email placeholder="Email" required>
+                    <textarea placeholder="Leave your message here!"></textarea>
+                    <br>
+                    <input type=submit class=button onclick=proses()>
+                <form>
+            </div>
+        </div> 
+        <footer>
+            Copyright&#169;2020 Tjiauw, Jerrie Jayadi
+        </footer>
+    </body>
+</html>
+
+<script>
+    var nama;
+    
+    function proses(){
+        nama=document.getElementById("namaLengkap").value;
+        alert("Thankyou for your response, "+nama);
+    }
+    function initMap(){
+        const location={lat: -7.957236, lng: 112.589033};
+        const map= new google.maps.Map(document.getElementById("map"),{
+            zoom: 18,
+            center: location,
+        });
+        const marker= new google.maps.Marker({
+            position: location,
+            map: map,
+        })
+    }
+
+</script>

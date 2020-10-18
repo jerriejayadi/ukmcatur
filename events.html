@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin:0%;
+                padding:0%;
+            }
+        </style>
+        <link href="header.css" rel="stylesheet">
+        <link href="home.css" rel="stylesheet">
+        <link href="footer.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class=header>
+            <div class=logo-container>
+                <a href=index.html>
+                    <img class=logo src="res/Frame 1.png">
+                </a>
+            </div>
+            <div class=nav>
+                <ul>
+                    <li><a class=navbar href=aboutus.html>About Us</a></li>
+                    <li><a class=navbar href=events.html>Events</a></li>
+                    <li><a class=navbar href=contactus.html>Contact Us</a></li>
+                    <li><a class=navbar href=registration.html>Registration</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id=content>
+            <img id=photos>
+            <div id=title>
+                
+            </div>
+            <div id=article>
+
+            </div>
+            <div id=article></div>
+            <button onclick=change2() class=prev>&#10094;</button>
+            <button onclick=change1() class=next>&#10095;</button>
+            <label class=round onclick=></label>
+            <label class=round></label>
+            <label class=round></label>
+        </div>
+        <footer>
+            Copyright&#169;2020 Tjiauw, Jerrie Jayadi
+        </footer>
+    </body>
+</html>
+
+<script>
+    var x=1;
+    var title = ["MaChung Chess Competition",
+                "Weekly Schedule",
+                "Training with Carlsen"
+
+                ];
+    var articles =  ["MaChung Chess Competition adalah sebuah perlombaan catur tingkat internasional yang diadakan oleh UKM Catur.<br>Perlombaan ini terdiri dari 3 tier, yaitu: <a class=readmore href=artikel1.html>Read More</a>", 
+                     "UKM Catur mempunyai jadwal rutin setiap minggunya untuk membantu para peserta berkembang... <a class=readmore href=artikel2.html>Read More", 
+                     "Veniam adipisicing duis eiusmod non cupidatat. Deserunt velit reprehenderit cupidatat consectetur occaecat culpa do adipisicing culpa et cillum id aliqua. Sit mollit aliqua commodo veniam qui occaecat anim. <a class=readmore href=artikel3.html>Read More</a>"
+                    ];
+    document.getElementById("photos").src="res/content"+x+".jpg";
+    document.getElementById("title").innerHTML=title[x-1];
+    document.getElementById("article").innerHTML=articles[x-1];
+    function change1()
+    {
+        x=x+1;
+        if(x<=3)
+        {
+            document.getElementById("photos").src="res/content"+x+".jpg";
+            document.getElementById("title").innerHTML=title[x-1];
+            document.getElementById("article").innerHTML=articles[x-1];
+        }
+        else
+        {
+            x=1;
+            document.getElementById("photos").src="res/content"+x+".jpg"
+            document.getElementById("title").innerHTML=title[x-1];
+            document.getElementById("article").innerHTML=articles[x-1];
+        }
+    }
+    function change2()
+    {
+        x=x-1;
+        if(x>=1)
+        {
+            document.getElementById("photos").src="res/content"+x+".jpg";
+            document.getElementById("title").innerHTML=title[x-1];
+            document.getElementById("article").innerHTML=articles[x-1];
+        }
+        else
+        {
+            x=3;
+            document.getElementById("photos").src="res/content"+x+".jpg";
+            document.getElementById("title").innerHTML=title[x-1];
+            document.getElementById("article").innerHTML=articles[x-1];
+        }
+    }
+</script>

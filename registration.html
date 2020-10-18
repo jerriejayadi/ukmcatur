@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin:0%;
+                padding:0%;
+            }
+        </style>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="registration.css">
+    </head>
+    <body>
+        <div class=header>
+            <div class=logo-container>
+                <a href=index.html><img class=logo src="res/Frame 1.png"></a>
+            </div>
+            <div class=nav>
+                <ul>
+                    <li><a class=navbar href=aboutus.html>About Us</a></li>
+                    <li><a class=navbar href=events.html>Events</a></li>
+                    <li><a class=navbar href=contactus.html>Contact Us</a></li>
+                    <li><a class=navbar href=registration.html>Registration</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class=content>
+            <div class=joinus-container>
+                <div class=joinus-desc>
+                    <div class=joinus-pic-container>
+                        <img class=arrow-btm src="res/Arrow_bottom.svg">
+                    </div>
+                    <div class=joinus-title>
+                        Join us
+                    </div>
+                    <div class=joinus-text>
+                        Join us now and be the professional chess player now!
+                    </div>
+                    <div class=joinus-ahref>
+                        <a class=aboutus href=aboutus.html>About Us</a>
+                    </div>
+                </div>
+                <div class=joinus-form>
+                    <div class=form-title>
+                        Register Here
+                    </div>
+                    <form method=post>
+                        <input id="namaLengkap" type=text placeholder="Nama Lengkap" required>
+                        <input id="nim" type=number placeholder="NIM" required>
+                        <input id="email" type=email placeholder="Email" required>
+                        <input id="nohp" type=number placeholder="Nomor HP" required>
+                        <br>
+                        <input type=submit class=button onclick=proses()>
+                    </form>  
+                </div>
+            </div>              
+        </div> 
+        <footer>
+            Copyright&#169;2020 Tjiauw, Jerrie Jayadi
+        </footer>
+    </body>
+</html>
+
+<script>
+    var namaLengkap;
+    var nim;
+    var email;
+    var nohp;
+    function proses(){
+        namaLengkap=document.getElementById("namaLengkap").value;
+        nim=document.getElementById("nim").value;
+        email=document.getElementById("email").value;
+        nohp=document.getElementById("nohp").value;
+        if(namaLengkap!="" && nim!="" && email!="" && nohp!="")
+        {
+            alert("Terima kasih, "+namaLengkap+"!\nSelamat Bergabung dalam UKM Catur!");
+        }
+        else{
+            alert("Harap mengisi form yang kosong terlebih dahulu");
+        }
+    }
+</script>
